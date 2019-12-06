@@ -13,6 +13,8 @@ int main() {
 	matrix myMatrix(rows,columns);
 	myMatrix.createMatrix();
 	myMatrix.display();
-
+	myMatrix.swapRows(2, 2);
+	cout << "////////////////////////////////////" << endl;
+	myMatrix.display();
 	system("pause");
 }

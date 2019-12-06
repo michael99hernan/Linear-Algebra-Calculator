@@ -6,10 +6,10 @@ matrix::matrix(int r,int c)
 {
 	this->r = r;
 	this->c = c;
-	mat = new int*[r];
+	mat = new float*[r];
 	for (int i = 0; i < r; i++)
 	{
-		mat[i] = new int[c];
+		mat[i] = new float[c];
 	}
 }
 
@@ -43,6 +43,22 @@ void matrix::display()
 void matrix::rowechelon()
 {
 
+}
+
+void matrix::swapRows(int first, int second)
+{
+	if (first - 1 > r || second - 1 > r)
+	{
+		return;
+	}
+	for (int i = 0; i < c; i++)
+	{
+		float temp;
+		temp = mat[first-1][i];
+		mat[first-1][i] = mat[second-1][i];
+		mat[second-1][i] = temp;
+
+	}
 }
 
 

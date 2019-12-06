@@ -11,10 +11,11 @@ public:
 	void createMatrix();
 	void display();
 	void rowechelon();
+	void swapRows(int, int);
 	~matrix();
 
 private:
-	int ** mat;
+	float ** mat;
 	int r;
 	int c;
 };
